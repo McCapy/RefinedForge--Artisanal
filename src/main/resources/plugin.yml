@@ -1,0 +1,7 @@
+name: RefinedForgeArtisanal
+prefix: RefinedForge
+version: '4.6.3-RELEASE'
+main: plugin.RefinedForgeArtisanal
+api-version: '1.21'
+load: POSTWORLD
+authors: [ helixneon ]

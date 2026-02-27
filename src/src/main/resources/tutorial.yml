@@ -1,0 +1,111 @@
+#
+# Tutorial, this covers how to use commands related to this plugin,
+# as well as how to use the given settings provided for the Attacks
+#
+
+EXAMPLE:
+
+  # This is the name of the combo that will be stamped on an item, I might add a way to change this dynamically
+  # via a new variable located on the outskirts of the combo, eg: name: '&cCapybara' this would make combos
+  # look more aesthetically pleasing.
+
+  # There should NEVER be more than 10 attacks, otherwise the internals will cause more calculation.
+
+  duration: 15
+  # how long (in seconds) till a combo concludes, ie once it concludes the combo, will reset to the first Attack
+  allowDualWield: false
+  # Whether this combo can be used with an item in the offhand
+  slash-1: # This isn't a required naming scheme, name it whatever you want.
+
+    attackType: SLASH # The AttackType this should correspond to what things are contained in the Attack
+    blank: false # Whether it's blank or not, if the AttackType isn't 'BLANK' then put false, otherwise true.
+    arcRadius: 1.5 # The radius of the circle that the slash spawns
+    cooldown: 5 # The cooldown of the slash, measured in seconds.
+    detail: 60 # How many location points are being placed, fewer means it looks like someone with hair-loss
+    layers: 3 # How many layers are on the slash
+    layerSpace: 0.25 # The space between each layer
+    layerColors: # The color of each individual layers, the amount of entries should match layers
+      - 'rgb(153, 129, 0)'
+      - 'rgb(204, 172, 0)'
+      - 'rgb(255, 231, 102)'
+    particleSize: [0.8, 1.1, 1.4] # The size of the dust particles being drawn
+    damage: 2.5 # The damage the attack does
+    delay: 6 # How many location points are drawn before 1 tick of delay
+    rotation: -160 # The rotation of the slash
+    jitter: 5 # The jitter of the slash along the local x-axis
+    distanceFromPlayer: 1.15 # The distance forward of the origin
+    sound: # The sound the slash plays
+      - 'entity.player.attack.sweep'
+      - '1'
+      - '0.45'
+    originAboveHead: 0 # The origin above the player's head
+    horizontalRotation: -15 # The horizontal rotation
+    horizontalOffset: 0 # The deviation to the left or right
+    damageRegion: 1.0  # The region where damage registers
+
+  thrust-2: # This isn't a required naming scheme, name it whatever you want.
+
+    attackType: THRUST # The AttackType this should correspond to what things are contained in the Attack
+    blank: false # Whether it's blank or not, if the AttackType isn't 'BLANK' then put false, otherwise true.
+    damageRegion: 1.0 # The region where damage registers
+    thrustStrength: 1.6 # How strong the user is pushed forward
+    thrustDelay: 5 # The delay till the thrust spawns in ticks after the player is pushed forward
+    damage: 2.5 # The damage the thrust does
+    length: 40 # The amount of location points
+    sound: # The sound the thrust plays after the delay
+      - 'entity.player.attack.sweep'
+      - '1'
+      - '2'
+    gradient: # The gradient for the tip of the thrust
+      - 'rgb(212, 168, 0)'
+      - 'rgb(255, 245, 230)'
+    handleColor: 'rgb(168, 132, 0)' # The color of the handle
+    cooldown: 5 # The cooldown of the thrust, measured in seconds.
+    startRadius: 0.4 # The starting radius of the tip of the thrust
+  magicshot-3: # This isn't a required naming scheme, name it whatever you want.
+    attackType: MAGICSHOT # The AttackType this should correspond to what things are contained in the Attack
+    blank: false # Whether it's blank or not, if the AttackType isn't 'BLANK' then put false, otherwise true.
+    spiralQuantity: 3 # The amount of bezier lines involved in the spiral
+    length: 35 # The length forward the spiral travels
+    radius: 0.8 # The starting radius of the attack
+    step: 0.5 # The step forward between locations
+    radiusFallOff: -0.025 # The falloff of the Attack
+    originAboveHead: -0.25 # The origin above the head of the attack
+    gradient: # The gradient between the start and the end of the attack
+      - 'rgb(212, 168, 0)'
+      - 'rgb(255, 245, 230)'
+    damageRegion: 1.25 # The region at which damage registers
+    damage: 1.5 # The damage the attack deals
+    cooldown: 5 # The cooldown of the magicshot, measured in seconds.
+    sound: # The sound of the attack
+      - 'block.beacon.power_select'
+      - '1'
+      - '2'
+  blank-4: # This isn't a required naming scheme, name it whatever you want.
+
+    attackType: BLANK # The AttackType this should correspond to what things are contained in the Attack
+    blank: true # Whether it's blank or not, if the AttackType isn't 'BLANK' then put false, otherwise true.
+    cooldown: 5 # The cooldown of the blank attack
+commands:
+    /rfa:
+      description: "Shows some info on the plugin, and some commands relating to it."
+    /help:
+      description: "Shows some info to help you use the plugin, credits, discord etc."
+    /reload:
+      description: "Reloads the plugins changes config, this applies changes you've made to your code."
+    /credits:
+      description: "Shows the credits, the people who made the plugin, and displays other things."
+    /info:
+      description: "Displays things like version, owner, discord, etc."
+    /discord:
+      description: "Shows the discord associated with the plugin."
+    /commands:
+      description: "Shows the list of the commands that the plugin implements."
+    /addCombo <combo_name>:
+      description: "Adds a combo to a player's held item."
+    /generate <attack_types>:
+      description: "Generates a template to start making a new attack"
+    /give <player_name> <combo_name> <material_name>:
+      description: "Gives a player a combo with a given material type."
+    /combos:
+      description: "A list of all loaded combos that the plugin has presently loaded."

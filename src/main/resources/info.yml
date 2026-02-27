@@ -1,0 +1,54 @@
+#
+# ██╗███╗░░██╗███████╗░█████╗░
+# ██║████╗░██║██╔════╝██╔══██╗
+# ██║██╔██╗██║█████╗░░██║░░██║
+# ██║██║╚████║██╔══╝░░██║░░██║
+# ██║██║░╚███║██║░░░░░╚█████╔╝
+# ╚═╝╚═╝░░╚══╝╚═╝░░░░░░╚════╝░
+#
+
+plugin-info:
+  version: ERROR
+
+commands:
+  - "§f§lRefinedForge Commands"
+  - "§f- §7/rfa"
+  - "§f- §7/rfa help"
+  - "§f- §7/rfa reload"
+  - "§f- §7/rfa patch(es) <note/ALL>"
+  - "§f- §7/rfa credits"
+  - "§f- §7/rfa info"
+  - "§f- §7/rfa discord"
+  - "§f- §7/rfa commands"
+  - "§f- §7/rfa addCombo <combo_name>"
+  - "§f- §7/rfa generate <attacks>"
+  - "§f- §7/rfa give <player> <combo_name> <material>"
+  - "§f- §7/rfa combos"
+
+discord:
+  - "§f§lRefinedForge Discord"
+  - "§f- §7Discord: §fhttps://discord.gg/kZFebJbrtC"
+
+help:
+  - "§f§lRefinedForge Help"
+  - "§f- §7Check plugins/RefinedForgeArtisanal/tutorial.yml"
+  - "§f- §7Discord: §fhttps://discord.gg/kZFebJbrtC"
+  - "§f- §7Creator: §f@mc_capybara_iii"
+
+rfa:
+  - "§7§o§nCreated by: §f@mc_capybara_iii §7(helixneon)"
+  - "§f§lRefinedForge: Artisanal"
+  - "§f- §7This plugin implements custom weapons."
+  - "§f- §7You can see all commands via /rfa commands"
+  - "§f- §7You can see any contributors via /rfa credits"
+  - "§f- §7The discord in contrast can be seen via /rfa discord"
+
+credits:
+  - "§f§lRefinedForge Credits"
+  - "§f- §7Creator & Head-Dev: §f@mc_capybara_iii"
+  - "§f- §7Inspiration: §f@grimmace."
+  - "§f- §7Assistance & Contributor: §f@somerandom5914"
+  - "§f- §7Vector Math: §f@grimmace."
+  - "§f- §7Logging Library: §f@appa_yip"
+  - "§f- §7Debugging Help: §f@emylord"
+  - "§7§oAll names listed here are discord handles"
